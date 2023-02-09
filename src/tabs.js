@@ -3,13 +3,13 @@ export default function addTabs() {
     // console.log("tabs.js");
     
     const tabSection = document.getElementById('tab-section');
-    const homeBtn = document.createElement('div');
-    const menuBtn = document.createElement('div');
-    const contactBtn = document.createElement('div');
+    const homeBtn = document.createElement('button');
+    const menuBtn = document.createElement('button');
+    const contactBtn = document.createElement('button');
 
-    homeBtn.setAttribute("id", "home-button");
-    menuBtn.setAttribute("id", "menu-button");
-    contactBtn.setAttribute("id", "contact-button");
+    homeBtn.setAttribute("id", "home-btn");
+    menuBtn.setAttribute("id", "menu-btn");
+    contactBtn.setAttribute("id", "contact-btn");
 
     homeBtn.textContent = "Home";
     menuBtn.textContent = "Menu";

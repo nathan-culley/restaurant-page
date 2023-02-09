@@ -1,21 +1,23 @@
-import Steak from './steak.jpg';
-
 export default function addIntro() {
-    
+    console.log("Display Menu-start");
     const content = document.getElementById('content');
-    const title = document.createElement("h1");
-    const introSection = document.createElement("div");
-    const introParagraph = document.createElement("p");
-    const introPhoto = document.createElement("img");
+    const list = document.createElement("ul");
+    const ribeye = document.createElement("li");
+    const filet = document.createElement("li");
+    const sirloin = document.createElement("li");
 
-    title.textContent = "Bluegrass Steakhouse";
-    introParagraph.textContent = "Welcome to the premier steakhouse and fine dining experience in central Kentucky. We source only the finest beef and other ingredients to provide you with a special experience you'll never forget.";
-    introPhoto.src = Steak;
+    list.textContent = "Our Menu";
+    ribeye.textContent= "Ribeye - $40";
+    filet.textContent = "Filet Mignon - $60";
+    sirloin.textContent = "Sirloin - $30";
 
-    content.appendChild(title);
-    content.appendChild(introSection);
-    introSection.appendChild(introParagraph);
-    introSection.appendChild(introPhoto);
+    content.appendChild(list);
+    list.appendChild(ribeye);
+    list.appendChild(filet);
+    list.appendChild(sirloin);
 
+    console.log(list);
+    console.log(content);
+    console.log(ribeye);
     return content;
 }

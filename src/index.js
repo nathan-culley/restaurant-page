@@ -4,32 +4,47 @@ import addMenu from './menu-section.js';
 import addContact from './contact-section.js';
 import './style.css';
 
-function displayTabs() {
-    const tabSection = document.getElementById('tab-section');
+const tabSection = document.getElementById('tab-section');
+const content = document.getElementById('content');
+
+function displayTabs() {  
     tabSection.HTMLcontent = addTabs();
-    return tabSection;
-    
+    const homeBtn = document.getElementById('home-btn');
+    const menuBtn = document.getElementById('menu-btn');
+    const contactBtn = document.getElementById('contact-btn');
+
+    homeBtn.onclick = displayHome;
+    menuBtn.onclick = displayMenu;
+    contactBtn.onclick = displayContact;
+
+    return tabSection;  
 }
 
 function displayHome() {
-    const content = document.getElementById('content');
+    removeAllChildNodes(content);
     content.HTMLcontent = addIntro();
-    //console.log(content);
+
     return content;
 }
 
 function displayMenu() {
-    const content = document.getElementById('content');
+    removeAllChildNodes(content);
     content.HTMLcontent = addMenu();
-    //console.log(content);
+
     return content;
 }
 
 function displayContact() {
-    const content = document.getElementById('content');
+    removeAllChildNodes(content);
     content.HTMLcontent = addContact();
-    //console.log(content);
+
     return content;
+}
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }
 
 displayTabs();
