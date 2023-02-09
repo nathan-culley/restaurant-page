@@ -1,21 +1,22 @@
-import Steak from './steak.jpg';
-
-export default function addIntro() {
+export default function addContact() {
     
     const content = document.getElementById('content');
     const title = document.createElement("h1");
-    const introSection = document.createElement("div");
-    const introParagraph = document.createElement("p");
-    const introPhoto = document.createElement("img");
+    const list = document.createElement("ul");
+    const phone = document.createElement("li");
+    const email = document.createElement("li");
+    const address = document.createElement("li");
 
-    title.textContent = "Bluegrass Steakhouse";
-    introParagraph.textContent = "Welcome to the premier steakhouse and fine dining experience in central Kentucky. We source only the finest beef and other ingredients to provide you with a special experience you'll never forget.";
-    introPhoto.src = Steak;
+    title.textContent = "Contact Us";
+    phone.textContent = "1-800-123-4567";
+    email.textContent = "contact@bluegrasssteakhouse.com";
+    address.textContent = "123 Main Street, Louisville, KY 98765"
 
     content.appendChild(title);
-    content.appendChild(introSection);
-    introSection.appendChild(introParagraph);
-    introSection.appendChild(introPhoto);
+    content.appendChild(list);
+    list.appendChild(phone);
+    list.appendChild(email);
+    list.appendChild(address);
 
     return content;
 }
